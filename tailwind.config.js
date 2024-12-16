@@ -8,9 +8,12 @@ module.exports = {
       padding: "16px",
     },
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'], // Nama font diambil dari Google Fonts
+      },
       colors: {
         primary: "#22d3ee",
-        dark: "#1e293b",
+        dark: "#192226",
         second: "#6b7280",
         lemon: "#a3e635",
       },
