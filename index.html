@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Tailwind CSS</title>
+    <link rel="Icon" href="./img/icon/favIcon.png" type="Image/png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script>
+      if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home" class="font-bold text-lg text-primary block py-6 dark:text-lemon">Habib Ahmad</a>
+          </div>
+          <div class="flex items-center p-4">
+            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+              <span class="hamburger-nav transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-nav transition duration-300 ease-in-out"></span>
+              <span class="hamburger-nav transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-2 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="text-base py-2 mx-4 flex text-slate-400 hover:text-primary dark:text-white">Home</a>
+                </li>
+                <li class="group">
+                  <a href="#about" class="text-base py-2 mx-4 flex text-slate-400 hover:text-primary dark:text-white">About Me</a>
+                </li>
+                <li class="group">
+                  <a href="#portofolio" class="text-base py-2 mx-4 flex text-slate-400 hover:text-primary dark:text-white">Portofolio</a>
+                </li>
+                <li class="group">
+                  <a href="#tools" class="text-base py-2 mx-4 flex text-slate-400 hover:text-primary dark:text-white">Tools</a>
+                </li>
+                <li class="group">
+                  <a href="#galery" class="text-base py-2 mx-4 flex text-slate-400 hover:text-primary dark:text-white">Galery</a>
+                </li>
+                <li class="group">
+                  <a href="#contact" class="text-base py-2 mx-4 flex text-slate-400 hover:text-primary dark:text-white">Contact Me</a>
+                </li>
+                <li class="mt-3 lg-mt-0 flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="circle-toggle h-4 w-4 rounded-full bg-white transition duration-500 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+    <!-- Hero -->
+    <section id="home" class="pt-36 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base text-primary font-semibold md:text-xl">
+              Hello Welcome 👋🏻, Nama saya<span class="block text-3xl font-bold bg-gradient-to-br from-purple-500 to-primary bg-clip-text text-transparent mt-2 md:text-4xl dark:bg-gradient-to-br dark:from-green-500 dark:to-lime-400">
+                Habib Ahmad
+              </span>
+            </h1>
+            <h2 class="text-second text-sm font-medium mb-5 lg:text-2xl">Web Developer & Android Developer</h2>
+            <p class="font-medium text-slate-400 mb-10 leading-relaxed">
+              Mencoba terus untuk upgrade Skill & Selalu berusaha dan Berdo'a.
+              <span class="text-dark font-semibold dark:bg-gradient-to-br dark:from-green-500 dark:to-lime-400 dark:bg-clip-text dark:text-transparent">Semangat! </span>🎉
+            </p>
+
+            <a
+              href="#"
+              class="text-base text-white font-semibold bg-gradient-to-br from-purple-500 to-primary py-3 rounded-xl px-8 hover:shadow-lg transition duration-300 hover:bg-gradient-to-tl hover:from-purple-500 hover:to-primary dark:bg-gradient-to-br dark:from-green-500 dark:to-lime-400 dark:hover:bg-gradient-to-tl dark:hover:from-green-500 dark:hover:dark:to-lime-400 dark:hover:shadow-green-700 dark:hover:shadow-md"
+              >Contact Me</a
+            >
+          </div>
+
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <div class="mt-10 relative lg:mt-0 lg:right-0">
+              <img src="./img/1.png" alt="profil" class="max-w-full mx-auto relative z-10" />
+              <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill="#22D3EE"
+                    d="M48.4,-49.8C60.6,-36.2,66.8,-18.1,63.7,-3.1C60.5,11.9,48.1,23.7,35.9,33.9C23.7,44.1,11.9,52.7,-1.1,53.8C-14,54.9,-28.1,48.5,-34.6,38.3C-41.1,28.1,-40.1,14,-41.9,-1.8C-43.7,-17.7,-48.4,-35.3,-41.9,-48.9C-35.3,-62.5,-17.7,-72,0.2,-72.2C18.1,-72.4,36.2,-63.4,48.4,-49.8Z"
+                    transform="translate(100 100) scale(1.1)"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- About -->
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 lg:w-1/2">
+            <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
+            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Salam Kenal 👋🏻</h2>
+            <p class="font-medium text-base text-slate-400 max-w-xl lg:text-lg">Halo, Selamat datang di halaman Portofolio Saya, Perkenalkan nama saya Habib Ahmad lulusan S1 dengan jurusan Sistem Informasi, Saya mempunyai beberapa keahlian seperti UI Designer, 3D Modeling, dan Programmer. Halaman ini merupakan tempat berbagi saya mengenai portofolio yang berisi tentang profil dan project saya.</p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h3 class="font-bold text-2xl text-dark mb-4 lg:text-3xl lg:pt-10 dark:text-white">Ayok Berteman</h3>
+            <p class="font-medium text-base text-slate-400 max-w-xl mb-6 lg:text-lg">
+              Dibawah ini merupakan beberapa dari profil saya yang bisa diakses untuk terhubung dengan saya, Jangan sungkan untuk bertanya atau untuk berteman.
+            </p>
+
+            <div class="flex items-center px-4">
+              <!-- Github Icon -->
+              <a href="https:/github.com/habibahmad1" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:bg-primary hover:border-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>GitHub</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
+              <!-- Github Icon End -->
+              <!-- Linkedin Icon -->
+              <a href="https://www.linkedin.com/in/habib-ahmad-77a0261bb/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:bg-primary hover:border-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>LinkedIn</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <!-- Linkedin Icon End -->
+              <!-- Dribble Icon -->
+              <a href="https://dribbble.com/HabibAhmad" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:bg-primary hover:border-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Dribbble</title>
+                  <path
+                    d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"
+                  />
+                </svg>
+              </a>
+              <!-- Dribble Icon End -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Portofolio -->
+    <section id="portofolio" class="pt-36 pb-32 bg-slate-100 dark:bg-slate-900">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Portofolio</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hasil Project</h2>
+            <p class="font-medium text-slate-400 text-md md:text-lg">Beberapa hasil design dari UI Design Aplikasi yang telah saya buat menggunakan Figma.</p>
+          </div>
+        </div>
+
+        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+          <div class="mb-12 md:w-1/2 p-6">
+            <div class="rounded-lg shadow-md overflow-hidden">
+              <img src="./img/porto/1.jpg" alt="1.jpg" width="w-full" />
+            </div>
+            <a
+              href="https://dribbble.com/shots/20543676-UI-Dompetku-App-Mobile?utm_source=Clipboard_Shot&utm_campaign=HabibAhmad&utm_content=UI%20Dompetku%20App%20Mobile&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=HabibAhmad&utm_content=UI%20Dompetku%20App%20Mobile&utm_medium=Social_Share"
+              target="_blank"
+              class="text-lg text-dark my-5 block text-center hover:text-purple-500 hover:ease-in-out transition duration-700 dark:text-white dark:hover:text-primary"
+              >Dompetku App</a
+            >
+            <p class="text-base text-second font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, soluta repellendus? Repellat eos minima expedita neque odio laboriosam enim ipsam?</p>
+          </div>
+          <div class="mb-12 md:w-1/2 p-6">
+            <div class="rounded-lg shadow-md overflow-hidden">
+              <img src="./img/porto/2.jpg" alt="1.jpg" width="w-full" />
+            </div>
+            <a
+              href="https://dribbble.com/shots/20543880-Food-App-UI-Design?utm_source=Clipboard_Shot&utm_campaign=HabibAhmad&utm_content=Food%20App%20UI%20Design&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=HabibAhmad&utm_content=Food%20App%20UI%20Design&utm_medium=Social_Share"
+              target="_blank"
+              class="text-lg text-dark my-5 block text-center hover:text-purple-500 dark:text-white dark:hover:text-primary hover:ease-in-out transition duration-700"
+              >Food App</a
+            >
+            <p class="text-base text-second font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, soluta repellendus? Repellat eos minima expedita neque odio laboriosam enim ipsam?</p>
+          </div>
+          <div class="mb-12 md:w-1/2 p-6">
+            <div class="rounded-lg shadow-md overflow-hidden">
+              <img src="./img/porto/3.jpg" alt="1.jpg" width="w-full" />
+            </div>
+            <a
+              href="https://dribbble.com/shots/20567513-UI-Hotel-Application?utm_source=Clipboard_Shot&utm_campaign=HabibAhmad&utm_content=UI%20Hotel%20Application&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=HabibAhmad&utm_content=UI%20Hotel%20Application&utm_medium=Social_Share"
+              target="_blank"
+              class="text-lg text-dark my-5 block text-center hover:text-purple-500 hover:ease-in-out transition duration-700 dark:text-white dark:hover:text-primary"
+              >Hotel App</a
+            >
+            <p class="text-base text-second font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, soluta repellendus? Repellat eos minima expedita neque odio laboriosam enim ipsam?</p>
+          </div>
+          <div class="mb-12 md:w-1/2 p-6">
+            <div class="rounded-lg shadow-md overflow-hidden">
+              <img src="./img/porto/4.jpg" alt="1.jpg" width="w-full" />
+            </div>
+            <a
+              href="https://dribbble.com/shots/20572742-UI-E-Commerce-Purple-Theme?utm_source=Clipboard_Shot&utm_campaign=HabibAhmad&utm_content=UI%20E-Commerce%20Purple%20Theme&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=HabibAhmad&utm_content=UI%20E-Commerce%20Purple%20Theme&utm_medium=Social_Share"
+              target="_blank"
+              class="text-lg text-dark my-5 block text-center hover:text-purple-500 hover:ease-in-out transition duration-700 dark:text-white dark:hover:text-primary"
+              >E-commerce App</a
+            >
+            <p class="text-base text-second font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, soluta repellendus? Repellat eos minima expedita neque odio laboriosam enim ipsam?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portofolio End -->
+
+    <!-- Tools -->
+    <section id="tools" class="pt-36 pb-32 bg-purple-950 dark:bg-slate-300">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Tools Used</h4>
+            <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark">The web is developed with some of these tools</h2>
+            <p class="font-medium text-slate-400 text-md md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dignissimos quod delectus perspiciatis, quis numquam est eos nulla aspernatur eligendi.</p>
+          </div>
+        </div>
+        <div class="w-full px-4">
+          <div class="flex flex-wrap justify-center items-center">
+            <a class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-4 xl:mx-8">
+              <img src="./img/tools/1.png" alt="html" />
+            </a>
+            <a class="max-w-[75px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-4 xl:mx-8">
+              <img src="./img/tools/2.png" alt="css" />
+            </a>
+            <a class="max-w-[170px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-4 xl:mx-8">
+              <img src="./img/tools/3.png" alt="javascript" />
+            </a>
+            <a class="max-w-[100px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-4 xl:mx-8">
+              <img src="./img/tools/4.png" alt="tailwind" />
+              <p class="font-bold text-sm text-black xl:text-md">Tailwind CSS</p>
+            </a>
+            <a class="max-w-[200px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-4 xl:mx-8">
+              <img src="./img/tools/5.png" alt="dribble" />
+            </a>
+            <a class="max-w-[170px] mx-4 py-4 transition opacity-60 grayscale duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-8">
+              <img src="./img/tools/6.png" alt="genshin" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Tools Ends -->
+
+    <!-- Galeri -->
+    <section id="galery" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Post</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Image Galery</h2>
+            <p class="font-medium text-slate-400 text-md md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aut autem mollitia!</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-500">
+              <img src="https://source.unsplash.com/600x400?programming" alt="Programming" id="programming" class="w-full" />
+              <div class="py-8 px-6">
+                <h3s>
+                  <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate text-center dark:text-white dark:hover:text-primary">Programming</a>
+                </h3s>
+                <p class="text-second my-5 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quod quae ipsum ratione aspernatur voluptate?</p>
+                <a href="#" class="py-2 px-4 font-medium text-white bg-primary rounded-lg hover:bg-opacity-70 dark:bg-lemon">Full Image</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-500">
+              <img src="https://source.unsplash.com/600x400?uiux" alt="ui" class="w-full" id="ui" />
+              <div class="py-8 px-6">
+                <h3s>
+                  <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate text-center dark:text-white dark:hover:text-primary">UI UX</a>
+                </h3s>
+                <p class="text-second my-5 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quod quae ipsum ratione aspernatur voluptate?</p>
+                <a href="#" class="py-2 px-4 font-medium text-white bg-primary rounded-lg hover:bg-opacity-70 dark:bg-lemon">Full Image</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-500">
+              <img src="https://source.unsplash.com/600x400?3ddesign" alt="design" class="w-full" id="3d" />
+              <div class="py-8 px-6">
+                <h3s>
+                  <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate text-center dark:text-white dark:hover:text-primary">3D Design</a>
+                </h3s>
+                <p class="text-second my-5 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quod quae ipsum ratione aspernatur voluptate?</p>
+                <a href="#" class="py-2 px-4 font-medium text-white bg-primary rounded-lg hover:bg-opacity-70 dark:bg-lemon">Full Image</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Galeri End-->
+
+    <!-- Contact Me -->
+    <section id="contact" class="pt-36 pb-32 bg-slate-200 dark:bg-slate-900">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Contact Me</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">More Info</h2>
+            <p class="font-medium text-slate-400 text-md md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aut autem mollitia!</p>
+          </div>
+        </div>
+
+        <form>
+          <div class="w-full lg:w-2/3 lg:mx-auto lg:border-primary lg:ring-1 lg:p-10 lg:rounded-2xl lg:bg-white lg:shadow-xl lg:dark:bg-slate-500">
+            <div class="w-full px-4 mb-10">
+              <label for="name" class="text-base text-primary font-bold mb-3 block">Name</label>
+              <input type="text" id="name" class="w-full bg-gray-300 text-second p-2 rounded-lg focus:outline-none focus:ring-2 focus:border-primary lg:bg-slate-200 dark:lg:bg-slate-600" placeholder="Fill your Name" />
+            </div>
+            <div class="w-full px-4 mb-10">
+              <label for="email" class="text-base text-primary font-bold mb-3 block">Email</label>
+              <input type="email" id="email" class="w-full bg-gray-300 text-second p-2 rounded-lg focus:outline-none focus:ring-2 focus:border-primary lg:bg-slate-200 dark:lg:bg-slate-600" placeholder="Fill your Email" />
+            </div>
+            <div class="w-full px-4 mb-10">
+              <label for="message" class="text-base text-primary font-bold mb-3 block">Message</label>
+              <textarea
+                type="text"
+                id="message"
+                class="w-full bg-gray-300 text-second p-2 rounded-lg focus:outline-none focus:ring-2 focus:border-primary lg:bg-slate-200 h-32 dark:lg:bg-slate-600"
+                placeholder="Fill your Message"
+              ></textarea>
+            </div>
+            <div class="w-full px-4">
+              <button class="px-10 py-3 bg-primary text-white shadow-lg rounded-md hover:bg-opacity-70 transition duration-300 w-full">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Me End -->
+
+    <!-- Footer -->
+    <footer id="footer" class="pt-24 pb-12 bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12 text-second font-medium md:w-1/3">
+            <h2 class="font-bold text-4xl text-white mb-5">Portofolio</h2>
+            <h3 class="text-2xl mb-2">Contact Details</h3>
+            <p>Habib Ahmad</p>
+            <p>habibahmad2597@gmail.com</p>
+            <p>Kp.Gelam Jaya, Kab.Tangerang</p>
+            <p>Banten</p>
+          </div>
+
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-5">Categories</h3>
+            <ul>
+              <li>
+                <a href="#programming" class="inline-block text-base text-second hover:text-primary mb-2">Programming</a>
+              </li>
+              <li>
+                <a href="#ui" class="inline-block text-base text-second hover:text-primary mb-2">UI UX Design</a>
+              </li>
+              <li>
+                <a href="#3d" class="inline-block text-base text-second hover:text-primary mb-2">3D Designs</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-5">Fast Track</h3>
+            <ul>
+              <li>
+                <a href="#home" class="inline-block text-base text-second hover:text-primary mb-2">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="inline-block text-base text-second hover:text-primary mb-2">About</a>
+              </li>
+              <li>
+                <a href="#portofolio" class="inline-block text-base text-second hover:text-primary mb-2">Portofolio</a>
+              </li>
+              <li>
+                <a href="#tools" class="inline-block text-base text-second hover:text-primary mb-2">Tools</a>
+              </li>
+              <li>
+                <a href="#galery" class="inline-block text-base text-second hover:text-primary mb-2">Galery</a>
+              </li>
+              <li>
+                <a href="#contact" class="inline-block text-base text-second hover:text-primary mb-2">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full pt-10 border-t border-slate-900">
+          <div class="flex items-center px-4 justify-center mb-5">
+            <!-- Github Icon -->
+            <a href="https:/github.com/habibahmad1" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-200 border-slate-400 hover:bg-primary hover:border-primary hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>GitHub</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+            <!-- Github Icon End -->
+            <!-- Linkedin Icon -->
+            <a
+              href="https://www.linkedin.com/in/habib-ahmad-77a0261bb/"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-200 border-slate-400 hover:bg-primary hover:border-primary hover:text-white"
+            >
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>LinkedIn</title>
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <!-- Linkedin Icon End -->
+            <!-- Dribble Icon -->
+            <a href="https://dribbble.com/HabibAhmad" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-200 border-slate-400 hover:bg-primary hover:border-primary hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Dribbble</title>
+                <path
+                  d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"
+                />
+              </svg>
+            </a>
+            <!-- Dribble Icon End -->
+          </div>
+          <p class="text-white text-xs text-center mt-5">Made with <span class="text-red-500 cursor-pointer">❤</span> By Habib Ahmad. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#home" class="hidden fixed z-[999] bottom-12 p-4 right-12 w-14 h-14 justify-center items-center rounded-full bg-primary hover:animate-pulse" id="top">
+      <span class="block w-5 h-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+    </a>
+    <!-- Back to Top End -->
+
+    <!-- My Js -->
+    <script src="./src/script.js"></script>
+    <!-- My Js -->
+  </body>
+</html>
